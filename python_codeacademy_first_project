@@ -1,0 +1,15 @@
+#Write a Python program called initials.py that displays the initials of your name in block letters as shown and dip your toes into ASCII art.
+#First name is Adeline, last name Hernandez.
+#Fun fact, I love dogs.
+name= '''
+      A
+    A   A
+  A       A
+A  A  A  A  A 
+A           A
+A           A
+A           A
+'''
+print(name)
+
+
