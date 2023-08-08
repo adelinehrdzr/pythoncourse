@@ -1,0 +1,27 @@
+#Sal runs the biggest shipping company in the tri-county area, Sal’s Shippers. Sal wants to make sure that every single one of his customers has the best, 
+#and most affordable experience shipping their packages.
+#In this project, you’ll build a program that will take the weight of a package and determine the cheapest way to ship that package using Sal’s Shippers.
+#Sal's Shipping
+weigth=41.5
+#Ground shipping
+if weigth<=2:
+ cost_ground=weigth *1.5+20
+elif weigth<=6:
+  cost_ground= weigth * 3 + 20
+elif weigth<=10:
+   cost_ground=weigth*4+20
+else:
+   cost_ground=weigth*4.75+20
+print(cost_ground)
+cost_ground_premium=125.00
+print("Ground Shipping Premium $", cost_ground_premium)
+#Drone Shipping
+if weigth<=2:
+  cost_droneground=weigth*4.50
+elif weigth<=6:
+   cost_droneground=weigth*9.00
+elif weigth<=10:
+    cost_droneground=weigth*12.00
+else:
+    cost_droneground=weigth*14.25
+print(cost_droneground)
