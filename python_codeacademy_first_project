@@ -10,6 +10,14 @@ A           A
 A           A
 A           A
 '''
-print(name)
-
+lastname='''
+H     H
+H     H
+H     H
+H H H H
+H     H
+H     H
+H     H
+'''
+print(name+lastname)
 
