@@ -1,0 +1,96 @@
+#This is the request
+go create files directories, files within directories and folder within directories
+# write a script to print the directory structure with proper indentation
+#
+# as in
+#
+# dir1/ and within dir1 you have a b c and dir2/ you have d e f/ and within f you have the file g (edited)
+#
+# when you print it
+#
+# dir1/
+#   a
+#   b
+#   c
+# dir2/
+#   d
+#   e
+#   f/
+#      g
+
+#This is how I've started, doing the task separated to better understand 
+#Creating  dir1.
+#import os
+#path1 = '//Users//adhernandez//Desktop//dir1'
+#os.chdir(path1)
+#for i in range(1,2):
+# Newfolder='dir'+str(i)
+# os.makedirs(Newfolder)
+
+#Creating  a,b,c within dir1
+#import os
+#path1 = '//Users//adhernandez//Desktop//dir1'
+#os.chdir(path1)
+#for i in range(ord('a'),ord('d')):
+ #Newfolder=chr(i)
+ #os.makedirs(Newfolder)
+
+#Creating  dir2.
+#import os
+#path1 = '//Users//adhernandez//Desktop//dir1'
+#os.chdir(path1)
+#for i in range(2,3):
+ #Newfolder='dir'+str(i)
+ #os.makedirs(Newfolder)
+
+
+#Creating  d,e,f within dir2
+
+#import os
+#path1 = '//Users//adhernandez//Desktop//dir1//dir2'
+#os.chdir(path1)
+#for i in range(ord('d'),ord('g')):
+# Newfolder=chr(i)
+# os.makedirs(Newfolder)
+
+#Creating g within f from dir2
+
+#import os
+#path1 = '//Users//adhernandez//Desktop//dir1//dir2//f'
+#os.chdir(path1)
+#for i in range(ord('g'),ord('h')):
+# Newfolder=chr(i)
+# os.makedirs(Newfolder)
+
+#Later I read some documentation to join paths and deleted the files to start again.
+
+# import os
+#
+# # Creating dir1
+# path1 = '//Users//adhernandez//Desktop//dir1'
+# os.makedirs(path1)
+#
+# # Creating a, b, c within  dir1
+# os.chdir(path1)
+# for i in range(ord('a'), ord('d')):
+#     Newfolder = chr(i)
+#     os.makedirs(Newfolder)
+#
+# # Creating dir2 within dir1
+# path2 = os.path.join(path1, 'dir2')
+# os.makedirs(path2)
+#
+# # Creating d, e, f within  dir2
+# os.chdir(path2)
+# for i in range(ord('d'), ord('g')):
+#     NewFolder2 = chr(i)
+#     os.makedirs(NewFolder2)
+#
+# # Creating g within f from dir2
+# pathf = os.path.join(path2, 'f')
+# os.chdir(pathf)
+# os.makedirs('g')
+
+
+#Still figuring it out on how to print just dir1,dir2 and their contents indented. 
+
