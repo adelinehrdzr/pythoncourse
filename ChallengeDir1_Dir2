@@ -1,5 +1,5 @@
 #This is the request
-go create files directories, files within directories and folder within directories
+#go create files directories, files within directories and folder within directories
 # write a script to print the directory structure with proper indentation
 #
 # as in
