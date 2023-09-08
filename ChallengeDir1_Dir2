@@ -94,3 +94,78 @@
 
 #Still figuring it out on how to print just dir1,dir2 and their contents indented. 
 
+#-------Round 2-----------------
+
+#Creating  directory named dir1.
+import os
+path1 = '//Users//adhernandez//Desktop//dir1'
+os.makedirs(path1)
+
+#Creating  text files a,b,c within dir1
+
+path1 = '//Users//adhernandez//Desktop//dir1'
+file_names = ["a.txt", "b.txt", "c.txt"]
+for filename in file_names:
+     file_path = os.path.join(path1, filename)
+     with open(file_path, 'w') as file:
+       pass
+#Creating  dir2.
+
+path2 = '//Users//adhernandez//Desktop//dir1//dir2'
+os.makedirs(path2)
+
+#Creating files  d and e within dir2
+
+os.chdir(path2)
+file_names = ["d.txt", "e.txt"]
+for filename in file_names:
+    file_path = os.path.join(path2, filename)
+    with open(file_path, 'w') as file:
+        pass
+
+# Creating  f as a folder to contain g, all that within dir2 as well
+
+
+path3 = '//Users//adhernandez//Desktop//dir1//dir2//f'
+os.makedirs(path3)
+
+#Creating file g within f which is inside dir2
+file_name = ["g.txt"]
+for filename in file_name:
+     file_path = os.path.join(path3, filename)
+     with open(file_path, 'w') as file:
+        pass
+
+
+# Print structure with proper indentation
+def print_structure(directory, indentation=0):
+    items = os.listdir(directory)
+
+
+    files_directories = []
+    subdir = []
+
+    for item in items:
+        item_path = os.path.join(directory, item)
+        if os.path.isdir(item_path):
+            subdir.append(item)
+        else:
+            files_directories.append(item)
+
+
+    for item in sorted(files_directories):
+        print('  ' * indentation + item)
+
+
+    for subdirectory in sorted(subdir):
+        subdir_path = os.path.join(directory, subdirectory)
+        print('  ' * indentation + subdirectory + '/')
+        print_structure(subdir_path, indentation + 1)
+
+
+main_directory = '//Users//adhernandez//Desktop//dir1'
+
+
+print_structure(main_directory)
+
+
