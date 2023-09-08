@@ -92,7 +92,7 @@
 # os.makedirs('g')
 
 
-#Still figuring it out on how to print just dir1,dir2 and their contents indented. 
+#Still figuring it out on how to ident the contents for printing them.
 
 #-------Round 2-----------------
 
